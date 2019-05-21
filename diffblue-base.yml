@@ -21,4 +21,5 @@
  nextPhase:
    time_out: 4
    
+cbmcArguments:
       paths: lifo
