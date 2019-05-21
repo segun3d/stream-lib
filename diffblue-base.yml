@@ -21,4 +21,4 @@
  nextPhase:
    time_out: 4
    
-      paths: fifo
+      paths: lifo
