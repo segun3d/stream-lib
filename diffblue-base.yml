@@ -18,8 +18,7 @@
    string-printable: true
    throw-runtime-exceptions: false
    unwind: 1
+   paths: lifo   
  nextPhase:
    time_out: 4
-   
- cbmcArguments:
-    paths: lifo
+
