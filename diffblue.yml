@@ -11,6 +11,7 @@ cbmcArguments:
   string-printable: true
   throw-runtime-exceptions: false
   unwind: 1
+  paths: lifo
   java-max-vla-length: 100000
 nextPhase:
   time_out: 4
