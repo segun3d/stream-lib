@@ -11,11 +11,21 @@ cbmcArguments:
   string-printable: true
   throw-runtime-exceptions: false
   unwind: 1
-  paths: lifo
+  paths: lifo2
   java-max-vla-length: 300000
 nextPhase:
   time_out: 4
 skipVerification: good
+key:
+  - string1
+  - string2
+  - string3
+  - string4
+  - string5
+  - string6
+mylist:
+  - item 2
+  - item 5344
 phases:
   - timeout: 150
     cbmcArguments:
