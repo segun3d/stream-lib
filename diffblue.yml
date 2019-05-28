@@ -12,10 +12,10 @@ cbmcArguments:
   throw-runtime-exceptions: false
   unwind: 1
   paths: lifo
-  java-max-vla-length: 200000
+  java-max-vla-length: 300000
 nextPhase:
   time_out: 4
-skipVerification: false
+skipVerification: true
 phases:
   - timeout: 150
     cbmcArguments:
