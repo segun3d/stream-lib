@@ -11,23 +11,29 @@ cbmcArguments:
   string-printable: true
   throw-runtime-exceptions: false
   unwind: 1
-  paths: lifo2
-  java-max-vla-length: 300000
+  paths: lifo
+  java-max-vla-length: 100000
 nextPhase:
   time_out: 4
-skipVerification: good
-key:
-  - string2
-  - string3
-  - string6
-mylist:
-  - item 2
-  - item 5344
+skipVerification: true
 phases:
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
-      depth: 1500000000
+      depth: 1500
+      smart-harness: simplest-constructor-and-nondet
+      java-assume-inputs-non-null: true
+      max-nondet-array-length: 10
+      max-nondet-string-length: 10
+      string-printable: true
+      throw-runtime-exceptions: false
+      unwind: 1
+    nextPhase:
+      not_analyzed: null
+  - timeout: 150
+    cbmcArguments:
+      classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
+      depth: 1500
       java-assume-inputs-non-null: true
       max-nondet-array-length: 10
       max-nondet-string-length: 10
@@ -58,7 +64,6 @@ phases:
       string-printable: false
       throw-runtime-exceptions: true
       unwind: 3
-      java-mock-class: MyClass2
   - timeout: 100
     cbmcArguments:
       classpath: '/tools/cbmc/models.jar:.'
@@ -70,7 +75,6 @@ phases:
       string-printable: false
       throw-runtime-exceptions: true
       unwind: false
-      java-mock-class: MyClass2
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
@@ -82,7 +86,6 @@ phases:
       string-printable: true
       throw-runtime-exceptions: false
       unwind: 1
-      java-mock-class: MyClass2
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models.jar:.'
@@ -94,7 +97,6 @@ phases:
       string-printable: false
       throw-runtime-exceptions: true
       unwind: 3
-      java-mock-class: MyClass2
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models-simple-overlay.jar:/tools/cbmc/models.jar:.'
@@ -106,7 +108,6 @@ phases:
       string-printable: true
       throw-runtime-exceptions: false
       unwind: 1
-      java-mock-class: MyClass2
   - timeout: 150
     cbmcArguments:
       classpath: '/tools/cbmc/models.jar:.'
