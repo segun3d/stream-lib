@@ -17,7 +17,6 @@ nextPhase:
   time_out: 4
 skipVerification: good
 key:
-  - string1
   - string2
   - string3
   - string6
